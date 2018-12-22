@@ -1,0 +1,241 @@
+/*Demo styles*/
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-button-next{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    top:auto;
+    transform: rotateZ(90deg);
+    animation:run 1s linear infinite;
+    z-index: 99;
+}
+@keyframes run {
+    from{
+        bottom:1%;
+        opacity:1;
+    }
+    to{
+        bottom: 5%;
+        opacity: 0;
+    }
+}
+
+/*音乐部分开始*/
+#music {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    z-index: 9;
+}
+.musicbg {
+    width: 60px;
+    height: 60px;
+}
+.musicImg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 44px;
+    height: 44px;
+    animation: music 2s linear infinite;
+}
+@keyframes music {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*第一屏开始*/
+.swiper-slide.one{
+    background: url("../img/one.jpg");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.one .oneImg {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -moz-border-radius: 100%;
+}
+.swiper-slide.one .top{
+    width: 90%;
+    position: absolute;
+    top: 10%;
+    overflow: hidden;
+}
+.swiper-slide.one .top img{
+    width: 100%;
+}
+.swiper-slide.one .center{
+    width: 70%;
+    height: 20%;
+    position: relative;
+    top: 24%;
+    margin: 0 auto;
+}
+.swiper-slide.one .center .Ring{
+    width: 30%;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.swiper-slide.one .center .marry{
+    width: 100%;
+    position: absolute;
+    top:10%;
+    left:0;
+}
+.swiper-slide.one .bottom{
+    width: 70%;
+    position: absolute;
+    font-size: 10vw;
+    color:#fff;
+    top:70%;
+}
+.swiper-slide.one .bottom p {
+    color: transparent;
+    background-color : blue;
+    text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+    background-clip : text;
+    -webkit-background-clip : text;
+}
+.swiper-slide.one .bottom span{
+    position: absolute;
+    left:18%;
+
+}
+/*第一屏结束*/
+/*第二屏开始*/
+.swiper-slide.two{
+    background: url("../img/twobg.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.two img{
+    width: 100%;;
+
+}
+.swiper-slide.two .top{
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    top:10%;
+    left:10%;
+    border:8px solid #fff;
+    overflow:hidden;
+    z-index: 1;
+}
+.swiper-slide.two .center{
+    width: 65%;
+    height: 30%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    overflow:hidden;
+    border:8px solid #fff;
+    z-index: 2;
+}
+.swiper-slide.two .bottom{
+    width: 40%;
+    height: 18%;
+    position: absolute;
+    bottom:10%;
+    right:10%;
+    border:8px solid #fff;
+    overflow:hidden;
+    z-index: 1;
+}
+/*第二屏结束*/
+/*第三屏开始*/
+.swiper-slide.three{
+    background: url("../img/threebg.png");
+    background-size:100% 100%;
+    position: relative;
+}
+.swiper-slide.three .top {
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    font-size: 5vw;
+ }
+ .swiper-slide.three .top p {
+    font-family:cursive;
+    text-shadow:6px 2px 2px #333;
+    color:deeppink;
+    font-size: 23px;
+ }
+.swiper-slide.three .top .threeImg1{
+   display: inline-block;
+   width: 30px;
+}
+
+/*第三屏结束*/
+/*第四屏开始*/
+.swiper-slide.four{
+    background: url("../img/fourbg.png");
+    background-size: 100% 100%;
+    position: relative;
+    color: #fff;
+}
+.swiper-slide.four .center{
+    width: 70%;
+    position: absolute;
+    top:15%;
+    height: 50%;
+    font-size:6vw;
+    display: flex;
+    align-items:stretch;  
+}
+.swiper-slide.four .center .centerP1,
+.swiper-slide.four .center .centerP2{
+    height: 8%;
+}
+.swiper-slide.four .center .centerP3{
+    height: 100%;
+    width: 25%;
+    font-size:4vw;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    margin-right: 0;
+}
+/*第四屏结束*/
